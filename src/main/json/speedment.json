@@ -1,0 +1,389 @@
+{
+  "config" : {
+    "speedmentVersion" : "Speedment:3.2.6",
+    "nameProtected" : false,
+    "expanded" : true,
+    "appId" : "5914214a-0151-48c1-b71b-8ed5d942b7b2",
+    "companyName" : "company",
+    "name" : "public",
+    "packageLocation" : "src/main/java/",
+    "id" : "public",
+    "dbmses" : [
+      {
+        "expanded" : true,
+        "password" : "1234",
+        "port" : 5432,
+        "schemas" : [
+          {
+            "nameProtected" : true,
+            "expanded" : true,
+            "tables" : [
+              {
+                "nameProtected" : true,
+                "isView" : false,
+                "restEnableCUD" : true,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "nullable" : false,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "login",
+                    "id" : "login",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "password",
+                    "id" : "password",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "info",
+                    "id" : "info",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "fullname",
+                    "id" : "fullname",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  }
+                ],
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "expanded" : false,
+                "restEnabled" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "student_pkey",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "id",
+                        "id" : "id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "student_pkey",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "student",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "student",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false
+              },
+              {
+                "nameProtected" : true,
+                "isView" : false,
+                "restEnableCUD" : true,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "nullable" : false,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "info",
+                    "id" : "info",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "answer",
+                    "id" : "answer",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "expanded" : false,
+                "restEnabled" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "task_pkey",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "id",
+                        "id" : "id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "task_pkey",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "task",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "task",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false
+              },
+              {
+                "nameProtected" : true,
+                "foreignKeys" : [
+                  {
+                    "nameProtected" : true,
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "Course",
+                        "foreignSchemaName" : "public",
+                        "expanded" : true,
+                        "name" : "task_id",
+                        "foreignColumnName" : "id",
+                        "id" : "task_id",
+                        "foreignTableName" : "task",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "task_array_task_id_foreign",
+                    "id" : "task_array_task_id_foreign",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "Course",
+                        "foreignSchemaName" : "public",
+                        "expanded" : true,
+                        "name" : "variant_id",
+                        "foreignColumnName" : "id",
+                        "id" : "variant_id",
+                        "foreignTableName" : "variant",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "task_array_variant_id_foreign",
+                    "id" : "task_array_variant_id_foreign",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "restEnableCUD" : true,
+                "columns" : [
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : false,
+                    "biDirectional" : false,
+                    "restUpdateBodyInclude" : false,
+                    "ordinalPosition" : 1,
+                    "enabled" : true,
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "name" : "id",
+                    "restCreateBodyInclude" : true,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "id",
+                    "hashIndex" : false,
+                    "restVisible" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "nullable" : false,
+                    "name" : "variant_id",
+                    "id" : "variant_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "nullable" : false,
+                    "name" : "task_id",
+                    "id" : "task_id",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "expanded" : true,
+                "restEnabled" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "task_array_pkey",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "id",
+                        "id" : "id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "task_array_pkey",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "task_array",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "task_array",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false
+              },
+              {
+                "nameProtected" : true,
+                "isView" : false,
+                "restEnableCUD" : true,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "nullable" : false,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "info",
+                    "id" : "info",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  }
+                ],
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "expanded" : false,
+                "restEnabled" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "variant_pkey",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "id",
+                        "id" : "id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "variant_pkey",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "variant",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "variant",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false
+              }
+            ],
+            "restEnabled" : true,
+            "name" : "public",
+            "restPath" : "",
+            "id" : "public",
+            "enabled" : true
+          }
+        ],
+        "typeName" : "PostgreSQL",
+        "ipAddress" : "127.0.0.1",
+        "name" : "Course",
+        "id" : "Course",
+        "enabled" : true,
+        "username" : "postgres"
+      }
+    ],
+    "enabled" : true
+  }
+}
